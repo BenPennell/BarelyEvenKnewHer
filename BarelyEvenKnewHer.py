@@ -9,10 +9,12 @@ while True:
     engine = tts.init()
     with sr.Microphone() as source:
         print("Say something > ")
-        audio = r.listen(source)
+        audio = r.listen(source, phrase_time_limit=10)
 
+        print("done listening")
         try:
             text = r.recognize_google(audio)
+            print("done transcribing")
         except:
             print("There was an error with transcribing that audio")
 
@@ -24,3 +26,5 @@ while True:
             response = word[:-2] + " her, I barely even knew her!"
             engine.say(response)
             engine.runAndWait()
+    text = ""
+
