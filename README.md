@@ -4,6 +4,7 @@ BarelyEvenKnewHer bot will listen to you as you speak, and will respond to any w
 
 ## install pyaudio
 py -m pip install pipwin
+
 py -m pipwin install pyaudio
 
 ## install pyttsx3
